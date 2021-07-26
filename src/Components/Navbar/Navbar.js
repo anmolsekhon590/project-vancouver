@@ -4,7 +4,7 @@ import './Navbar.css'
 export default function Navbar() {
     return(
         <div className="navbar">
-            <div class="navbar-logo">|  Project Vancouver |</div>
+            <div className="navbar-logo">|  Project Vancouver |</div>
         </div>
     )
 }

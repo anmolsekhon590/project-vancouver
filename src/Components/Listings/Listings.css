@@ -1,0 +1,21 @@
+.listing-container {
+    background-color: aqua;
+}
+
+.listing-card {
+    display: flex;
+}
+
+.listing-img-container {
+    background-color: violet;
+    height: 150px;
+    width: 150px;
+}
+
+.listing-img {
+
+}
+
+.listing-description-container {
+    background-color: yellowgreen;
+}
