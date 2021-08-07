@@ -25,16 +25,23 @@ export default function Listings() {
                 <div>
                     <h2>Listings:</h2>
                 </div>
-                <div className="listing-container">
+
+                <div>
                     {listings.map((element) => (
-                        <div key={element.listingId}>
-                            <h3>
-                                {element.heading}
-                            </h3>
+
+                        <div className="listing-container" key={element.listingId}>
+                            <div>
+                                <h3 className="listing-heading">
+                                    {element.heading}
+                                </h3>
+                            </div>
+
                             <div className="listing-card">
+
                                 <div className="listing-img-container">
-                                    <img className="listing-img" alt="listing"></img>
+                                    <img className="listing-img" src={`http://127.0.0.1:8080/downloadFile/${element.imageURL}`} alt="listing"></img>
                                 </div>
+
                                 <div className="listing-description-container">
                                     <p>
                                         {element.description}
@@ -47,7 +54,6 @@ export default function Listings() {
 
                             </div>
 
-                            {console.log("rendered")}
                         </div>
                     ))}
                 </div>
