@@ -6,7 +6,7 @@ export default function Listings() {
 
     useEffect(() => {
 
-        fetch("http://localhost:8080/listing")
+        fetch("https://99.244.63.14:8080/listing")
             .then(response => response.json())
             .then(json => setlistings(json))
 
@@ -23,7 +23,7 @@ export default function Listings() {
         return (
             <div>
                 <div>
-                    <h2>Listings:</h2>
+                    <h2 className="main-heading">Listings:</h2>
                 </div>
 
                 <div>
@@ -39,7 +39,7 @@ export default function Listings() {
                             <div className="listing-card">
 
                                 <div className="listing-img-container">
-                                    <img className="listing-img" src={`http://127.0.0.1:8080/downloadFile/${element.imageURL}`} alt="listing"></img>
+                                    <img className="listing-img" src={`https://99.244.63.14:8080/downloadFile/${element.imageURL}`} alt="listing"></img>
                                 </div>
 
                                 <div className="listing-description-container">
@@ -47,9 +47,9 @@ export default function Listings() {
                                         {element.description}
                                     </p>
 
-                                    <p>Location: {element.location[0].toUpperCase() + element.location.substring(1).toLowerCase()}</p>
+                                    <p>&#128205; Location: {element.location[0].toUpperCase() + element.location.substring(1).toLowerCase()}</p>
 
-                                    <p>Price: ${Number((element.price)).toLocaleString()}</p>
+                                    <p>&#128181; Price: ${Number((element.price)).toLocaleString()}</p>
                                 </div>
 
                             </div>
