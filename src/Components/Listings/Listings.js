@@ -6,7 +6,7 @@ export default function Listings() {
 
     useEffect(() => {
 
-        fetch("https://99.244.63.14:8080/listing")
+        fetch("https://localhost:8080/listing")
             .then(response => response.json())
             .then(json => setlistings(json))
 
@@ -39,7 +39,7 @@ export default function Listings() {
                             <div className="listing-card">
 
                                 <div className="listing-img-container">
-                                    <img className="listing-img" src={`https://99.244.63.14:8080/downloadFile/${element.imageURL}`} alt="listing"></img>
+                                    <img className="listing-img" src={`https://127.0.0.1:8080/downloadFile/${element.imageURL}`} alt="listing"></img>
                                 </div>
 
                                 <div className="listing-description-container">
